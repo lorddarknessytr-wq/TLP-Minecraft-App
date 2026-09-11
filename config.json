@@ -1,10 +1,10 @@
 {
-  "_comment_token": "توکن ربات را اینجا نگذارید! در GitHub Secrets با نام RUBIKA_BOT_TOKEN ذخیره کنید.",
+  "_comment_token": "CEBJBE0MIFOUQWNRWDDOURRPBLHQEUWUNMHRQSOKFHJQUZKSOYOMFKBNNDNVBBVD",
 
-  "source_channel_guid": "c0xSOURCE_CHANNEL_GUID",
+  "source_channel_guid": "c0ECrHf06f41d4ee8759a5c9cb703079",
 
-  "owner_guid": "c0xYOUR_OWN_GUID",
-  "_comment_owner": "GUID پیوی خودتان با ربات. برای پیدا کردنش، به README.md بخش «پیدا کردن GUIDها» مراجعه کنید.",
+  "owner_guid": "u0IahsF05003ed26a32d073c66c1388d",
+  "_comment_owner": "u0IahsF05003ed26a32d073c66c1388d",
 
   "schedule": {
     "start_hour_tehran": 11,
@@ -14,9 +14,9 @@
 
   "destination_channels": [
     {
-      "guid": "c0xCHANNEL_ONE_GUID",
+      "guid": "c0DBT990e47b63fa688bba87d5736cc2",
       "name": "کانال یک",
-      "channel_link": "https://rubika.ir/your_channel_one",
+      "channel_link": "https://rubika.ir/Addonmine",
       "mod_photo_extra_text": "🔥 مود ویژه امروز",
       "mod_file_caption": "دانلود کنید و لذت ببرید 🎮\nحتما نظر خودتون رو زیر پست بنویسید.",
       "video_extra_text": "🎬 ویدیوی امروز رو از دست ندید!"
