@@ -1,0 +1,14 @@
+{
+  "last_offset_id": null,
+  "mods": [],
+  "videos": [],
+  "used_mods_per_channel": {},
+  "used_videos_per_channel": {},
+  "pending_photo": null,
+
+  "posted_hours_today": {"date": null, "hours": []},
+
+  "errors": [],
+  "last_error_notify_time": null,
+  "bug_page_offset": 0
+}

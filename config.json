@@ -1,0 +1,33 @@
+{
+  "_comment_token": "توکن ربات را اینجا نگذارید! در GitHub Secrets با نام RUBIKA_BOT_TOKEN ذخیره کنید.",
+
+  "source_channel_guid": "c0xSOURCE_CHANNEL_GUID",
+
+  "owner_guid": "c0xYOUR_OWN_GUID",
+  "_comment_owner": "GUID پیوی خودتان با ربات. برای پیدا کردنش، به README.md بخش «پیدا کردن GUIDها» مراجعه کنید.",
+
+  "schedule": {
+    "start_hour_tehran": 11,
+    "end_hour_tehran": 23,
+    "video_every_n_slots": 4
+  },
+
+  "destination_channels": [
+    {
+      "guid": "c0xCHANNEL_ONE_GUID",
+      "name": "کانال یک",
+      "channel_link": "https://rubika.ir/your_channel_one",
+      "mod_photo_extra_text": "🔥 مود ویژه امروز",
+      "mod_file_caption": "دانلود کنید و لذت ببرید 🎮\nحتما نظر خودتون رو زیر پست بنویسید.",
+      "video_extra_text": "🎬 ویدیوی امروز رو از دست ندید!"
+    },
+    {
+      "guid": "c0xCHANNEL_TWO_GUID",
+      "name": "کانال دو",
+      "channel_link": "https://rubika.ir/your_channel_two",
+      "mod_photo_extra_text": "🎁 مود جدید",
+      "mod_file_caption": "فایل مود آماده نصبه ✅",
+      "video_extra_text": "🎥 این ویدیو رو حتما ببینید"
+    }
+  ]
+}
