@@ -1,10 +1,16 @@
 name: Rubika Mod Bot
 
 on:
-  schedule:
-    # هر ۱۵ دقیقه اجرا می‌شود (برای پاسخ‌گویی سریع‌تر در پیوی + دقت زمان‌بندی پست‌ها)
-    - cron: "*/15 * * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force_post_channel:
+        description: "برای پست فوری مود: شمارهٔ کانال (طبق ترتیب config.json) یا all برای همه؛ خالی=بدون پست فوری"
+        required: false
+        default: ""
+      flush_updates:
+        description: "برای دور ریختن فوری انبار پیام‌های قدیمی (بدون پاسخ دادن به هیچ‌کدوم) بنویسید: yes"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -31,13 +37,27 @@ jobs:
       - name: Run bot (collect + post + owner DM)
         env:
           RUBIKA_BOT_TOKEN: ${{ secrets.RUBIKA_BOT_TOKEN }}
+          TRIGGER_TYPE: ${{ github.event_name }}
+          FORCE_POST_CHANNEL: ${{ github.event.inputs.force_post_channel }}
+          FLUSH_UPDATES: ${{ github.event.inputs.flush_updates }}
         run: python run_bot.py
 
       - name: Save updated state.json back to the repo
         run: |
           git config user.name "rubika-mod-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add state.json
-          git diff --quiet --cached || git commit -m "update state [skip ci]"
-          git pull --rebase || true
-          git push
+          for i in 1 2 3; do
+            git add state.json
+            if git diff --quiet --cached; then
+              echo "چیزی برای کامیت نبود."
+              break
+            fi
+            git commit -m "update state [skip ci]"
+            git pull --rebase origin main
+            if git push origin main; then
+              echo "push موفق بود."
+              break
+            fi
+            echo "تلاش $i برای push ناموفق بود، دوباره امتحان می‌کنیم..."
+            sleep 3
+          done
