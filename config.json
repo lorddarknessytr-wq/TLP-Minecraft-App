@@ -1,33 +1,60 @@
 {
-  "_comment_token": "CEBJBE0MIFOUQWNRWDDOURRPBLHQEUWUNMHRQSOKFHJQUZKSOYOMFKBNNDNVBBVD",
+  "_comment_token": "توکن ربات را اینجا نگذارید! در GitHub Secrets با نام RUBIKA_BOT_TOKEN ذخیره کنید.",
 
   "source_channel_guid": "c0ECrHf06f41d4ee8759a5c9cb703079",
 
-  "owner_guid": "u0IahsF05003ed26a32d073c66c1388d",
-  "_comment_owner": "u0IahsF05003ed26a32d073c66c1388d",
+  "owner_guid": "b0IahsF0BEAo0c667263fa750539d1d2",
 
+  "panel_keyword": "panel",
+  "broadcast_secret": "/forall",
+  "help_text": "سلام! برای دریافت فایل مود، شمارهٔ نوشته‌شده زیر پستش رو با ‌#‌ یا / برام بفرستید (مثلاً ‌#‌‌1 یا /‌1) اگر در ربات مشکلی پیدا کردید میتونید به /ticket به پشتیبانی اطلاع دهید. باتشکر.",
+  "start_text": "👋 سلام به ربات Admin TLP خوش اومدید!\n\n🔔برای دریافت هر مود، شماره‌ای که زیر همون پست توی کانال نوشته شده رو برام بفرستید (مثلاً 1 یا #1)، بعد تایید عضویت در کانال ها /‌file رو بزنید تا فایلش براتون ارسال شود.\n\n📣 اگر با پشتیبانی کاری داشتید، با /ticket می‌تونید برای مالک پیام بذارید.",
+  "_comment_join":   "کانال‌هایی که عضویت توشون برای گرفتن فایل مود اجباریه. guid رو از GUID این چت (پیام /myid به بات در پیوی همون کانال، یا فوروارد یه پیام از کانال به بات) پیدا کن.",
+  "required_join_channels": [
+    {"guid": "@BarBariio_yt", "name": "کانال ۱", "link": "@BarBariio_yt"}
+  ],
+
+  "texts": {
+    "ticket_prompt": "لطفاً متن تیکت خودتون رو بنویسید.",
+    "ticket_sent": "تیکت شما ارسال شد. با تشکر 🙏"
+  },
+
+  "_comment_schedule": "start_hour_tehran/end_hour_tehran = بازهٔ فعالیت. هر کانال با plan (۰/۱/۲) یا با mod_interval_hours/video_interval_hours اختصاصی مشخص می‌شه.",
   "schedule": {
-    "start_hour_tehran": 11,
+    "start_hour_tehran": 9,
     "end_hour_tehran": 23,
-    "video_every_n_slots": 4
+    "default_plan": 1,
+    "plans": {
+      "0": {"mod_interval_hours": 2, "video_interval_hours": 4.5},
+      "1": {"mod_interval_hours": 1, "video_interval_hours": 3},
+      "2": {"mod_interval_hours": 0.5, "video_interval_hours": 2}
+    }
   },
 
   "destination_channels": [
     {
-      "guid": "c0DBT990e47b63fa688bba87d5736cc2",
-      "name": "کانال یک",
-      "channel_link": "https://rubika.ir/Addonmine",
-      "mod_photo_extra_text": "🔥 مود ویژه امروز",
-      "mod_file_caption": "دانلود کنید و لذت ببرید 🎮\nحتما نظر خودتون رو زیر پست بنویسید.",
-      "video_extra_text": "🎬 ویدیوی امروز رو از دست ندید!"
+      "guid": "c0CkD2t08fb7278be73f1113291ad44d",
+      "name": "BarBariio_yt",
+      "enabled": true,
+      "plan": 0,
+      "send_file_directly": true,
+      "channel_link": "@BarBariio_yt",
+      "mod_photo_extra_text": "خوشت اومد ری اکشن فراموشت نشه🧡😊 \n\n #بربری #ماینکرفت #مود_ماینکرفت ",
+      "mod_file_caption": "#فایل_مود \n\n 📋 File : 1-1 \n\n اگه بزنی رو پیوستن یک بربری خوشمزه بهت میدم🥰 \n\n #بربری #ماینکرفت #مود_ماینکرفت \n\n〘 @BarBariio_yt ⏎ 〙",
+      "video_extra_text": "ری اکشن فراموش نکنی مَشتی😊\n\n #بربری #ماینکرفت #مود_ماینکرفت\n\n 〘 @BarBariio_yt ⏎ 〙",
+      "videos_enabled": false
     },
     {
-      "guid": "c0xCHANNEL_TWO_GUID",
-      "name": "کانال دو",
-      "channel_link": "https://rubika.ir/your_channel_two",
-      "mod_photo_extra_text": "🎁 مود جدید",
-      "mod_file_caption": "فایل مود آماده نصبه ✅",
-      "video_extra_text": "🎥 این ویدیو رو حتما ببینید"
+      "guid": "c0Dstdk0f57ec41df351be2d40c89404",
+      "name": "",
+      "enabled": true,
+      "plan": 1,
+      "send_file_directly": true,
+      "channel_link": "",
+      "mod_photo_extra_text": "📱برای ماینکرافت بدراک📱 \n 🔰🔱دانلود فایل مود در پست بعدی🔱🔰 \n\n\n🌲🆔 @MODY_MINECRAFT \n\n 🌋🏞️مود و شیدر بی نهایت ♾️ \n🔒برای مود شیدر بیشتر بزن رو پیوستن🔒",
+      "mod_file_caption": " /Quote مربوط به پست بالا⬆️⬆️⬆️ \n\n\n 🌲🆔 @MODY_MINECRAFT \n\n\n 🌋🏞️مود و شیدر بی نهایت ♾️ \n 🔒برای مود شیدر بیشتر بزن رو پیوستن🔒 /Quote ",
+      "video_extra_text": " /Quote 😍امید وارم از ویدیو خوشتون بیاد😍 \n\n\n 🌲🆔 @MODY_MINECRAFT \n\n\n 🌋🏞️ویدیو بی نهایت ♾️ \n 🔒برای ویدیو بیشتر بزن رو پیوستن🔒 /Quote ",
+      "videos_enabled": true
     }
   ]
 }
